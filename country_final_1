@@ -11,7 +11,7 @@ def connect_supabase():
     Client = create_client(url, key)
 
     print("Supabase 연결 완료")
-    return client
+    return Client
 
 supabase = connect_supabase()
 
