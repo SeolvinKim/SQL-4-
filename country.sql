@@ -67,7 +67,7 @@ INSERT INTO edu_country.cities (city_name, country_code, is_capital) VALUES
 INSERT INTO edu_country.languages (country_code, language_name, is_official) VALUES
 ('KR', 'Korean', TRUE),
 ('US', 'English', TRUE),
-('FR', 'French', TRUE);
+('FR', 'French', TRUE),
 ('JP', 'Japanese', TRUE),      -- 일본 (일어)
 ('CA', 'English', TRUE),       -- 캐나다 (영어, 불어도 공용어이나 대표로 영어 추가)
 ('CN', 'Chinese', TRUE),       -- 중국 (중국어)
