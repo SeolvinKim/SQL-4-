@@ -57,18 +57,26 @@ INSERT INTO edu_country.countries (country_code, country_name, continent, popula
 ('DE', 'Germany', 'Europe', 83200000),
 ('UK', 'United Kingdom', 'Europe', 67300000);
 
+
 -- 2. cities (도시 데이터)
 INSERT INTO edu_country.cities (city_name, country_code, is_capital) VALUES
 ('Seoul', 'KR', TRUE),
 ('New York', 'US', FALSE),
+('Los Angeles', 'US', FALSE),
+('Chicago', 'US', FALSE),
 ('Paris', 'FR', TRUE),
 ('Tokyo', 'JP', TRUE),
 ('Ottawa', 'CA', TRUE),
+('Toronto', 'CA', FALSE),
+('Vancouver', 'CA', FALSE),
 ('Beijing', 'CN', TRUE),
 ('Singapore', 'SG', TRUE),
 ('Manila', 'PH', TRUE),
 ('Berlin', 'DE', TRUE),
-('London', 'UK', TRUE);
+('London', 'UK', TRUE),
+('Manchester', 'UK', FALSE),
+('Birmingham', 'UK', FALSE);
+
 
 -- 3. languages (언어 데이터)
 INSERT INTO edu_country.languages (country_code, language_name, is_official) VALUES
@@ -83,6 +91,7 @@ INSERT INTO edu_country.languages (country_code, language_name, is_official) VAL
 ('DE', 'German', TRUE),        -- 독일 (독일어)
 ('UK', 'English', TRUE);       -- 영국 (영어)
 
+
 -- 4. landmarks (랜드마크 데이터)
 INSERT INTO edu_country.landmarks (landmark_name, country_code, city_id, established_year) VALUES
 ('Gyeongbokgung Palace', 'KR', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Seoul'), 1395),
@@ -94,7 +103,9 @@ INSERT INTO edu_country.landmarks (landmark_name, country_code, city_id, establi
 ('Tokyo Tower', 'JP', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Tokyo'), 1958),
 ('Big Ben', 'UK', (SELECT city_id FROM edu_country.cities WHERE city_name = 'London'), 1859),
 ('Brandenburg Gate', 'DE', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Berlin'), 1791),
-('Marina Bay Sands', 'SG', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Singapore'), 2010);
+('Marina Bay Sands', 'SG', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Singapore'), 2010),
+('CN Tower', 'CA', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Toronto'), 1976),
+('Forbidden City', 'CN', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Beijing'), 1420);
 
 
 -- 5. currencies (통화 데이터)
@@ -109,6 +120,8 @@ INSERT INTO edu_country.currencies (currency_code, country_code, currency_name, 
 ('PHP', 'PH', 'Philippine Peso', 24.10),
 ('EUR', 'DE', 'Euro', 1485.70),
 ('GBP', 'UK', 'British Pound', 1732.40);
+
+
 -- ------------------------------------------------------------
 -- 1. 국가 수, 평균 인구, 최고 인구, 최저 인구를 한 번에 조회하기
 -- ------------------------------------------------------------
