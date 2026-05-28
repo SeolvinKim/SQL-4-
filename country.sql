@@ -64,9 +64,9 @@ INSERT INTO edu_country.languages (country_code, language_name, is_official) VAL
 
 -- 4. landmarks (랜드마크 데이터)
 INSERT INTO edu_country.landmarks (landmark_name, country_code, city_id, established_year) VALUES
-('Gyeongbokgung Palace', 'KR', (SELECT city_id FROM cities WHERE city_name = 'Seoul'), 1395),
-('Statue of Liberty', 'US', (SELECT city_id FROM cities WHERE city_name = 'New York'), 1886),
-('Eiffel Tower', 'FR', (SELECT city_id FROM cities WHERE city_name = 'Paris'), 1889);
+('Gyeongbokgung Palace', 'KR', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Seoul'), 1395),
+('Statue of Liberty', 'US', (SELECT city_id FROM edu_country.cities WHERE city_name = 'New York'), 1886),
+('Eiffel Tower', 'FR', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Paris'), 1889);
 
 -- 5. currencies (통화 데이터)
 INSERT INTO edu_country.currencies (currency_code, country_code, currency_name, exchange_rate) VALUES
