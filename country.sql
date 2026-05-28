@@ -46,9 +46,13 @@ CREATE TABLE edu_country.currencies (
 
 -- 1. countries (국가 데이터)
 INSERT INTO edu_country.countries (country_code, country_name, continent, population) VALUES
-('KR', 'South Korea', 'Asia', 51780000),
-('US', 'United States', 'North America', 331900000),
-('FR', 'France', 'Europe', 67900000);
+('JP', 'Japan', 'Asia', 125800000),
+('CA', 'Canada', 'North America', 38900000),
+('CN', 'China', 'Asia', 1412000000),
+('SG', 'Singapore', 'Asia', 5900000),
+('PH', 'Philippines', 'Asia', 113900000),
+('DE', 'Germany', 'Europe', 83200000),
+('GB', 'United Kingdom', 'Europe', 67300000);
 
 -- 2. cities (도시 데이터)
 INSERT INTO edu_country.cities (city_name, country_code, is_capital) VALUES
