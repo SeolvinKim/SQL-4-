@@ -13,14 +13,14 @@ CREATE TABLE edu_country.countries (
 CREATE TABLE edu_country.cities (
     city_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     city_name VARCHAR(100) NOT NULL,
-    country_code CHAR(2) NOT NULL REFERENCES countries(country_code) ON DELETE CASCADE,
+    country_code CHAR(2) NOT NULL REFERENCES edu_country.countries(country_code) ON DELETE CASCADE,
     is_capital BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 -- 3. languages (국가별 언어 테이블)
 CREATE TABLE edu_country.languages (
     language_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
-    country_code CHAR(2) NOT NULL REFERENCES countries(country_code) ON DELETE CASCADE,
+    country_code CHAR(2) NOT NULL REFERENCES edu_country.countries(country_code) ON DELETE CASCADE,
     language_name VARCHAR(50) NOT NULL,
     is_official BOOLEAN NOT NULL DEFAULT FALSE,
     UNIQUE (country_code, language_name) -- 한 국가 내에서 동일한 언어 중복 등록 방지
@@ -30,15 +30,15 @@ CREATE TABLE edu_country.languages (
 CREATE TABLE edu_country.landmarks (
     landmark_id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     landmark_name VARCHAR(150) NOT NULL,
-    country_code CHAR(2) NOT NULL REFERENCES countries(country_code) ON DELETE CASCADE,
-    city_id UUID REFERENCES cities(city_id) ON DELETE SET NULL, -- 도시가 삭제되어도 랜드마크 기록은 유지하되 참조만 Null 처리
+    country_code CHAR(2) NOT NULL REFERENCES edu_country.countries(country_code) ON DELETE CASCADE,
+    city_id UUID REFERENCES edu_country.cities(city_id) ON DELETE SET NULL, -- 도시가 삭제되어도 랜드마크 기록은 유지하되 참조만 Null 처리
     established_year INTEGER CHECK (established_year <= EXTRACT(YEAR FROM CURRENT_DATE)) -- 미래 연도 입력 방지
 );
 
 -- 5. currencies (통화 테이블)
 CREATE TABLE edu_country.currencies (
     currency_code CHAR(3) NOT NULL, -- ISO 4217 기준 (예: KRW)
-    country_code CHAR(2) NOT NULL REFERENCES countries(country_code) ON DELETE CASCADE,
+    country_code CHAR(2) NOT NULL REFERENCES edu_country.countries(country_code) ON DELETE CASCADE,
     currency_name VARCHAR(50) NOT NULL,
     exchange_rate NUMERIC(15, 6) CHECK (exchange_rate > 0), -- 환율은 0보다 커야 함
     PRIMARY KEY (currency_code, country_code) -- 여러 국가가 같은 통화(예: EUR)를 사용할 수 있으므로 복합키 사용
