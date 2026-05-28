@@ -3,8 +3,8 @@
 from getpass import getpass
 from supabase import create_client
 
-url = "https://uwsijobngxklibfiegzw.supabase.co"
-key = "sb_publishable_MPsGCY6VpZsZLDc3f8FRXw_0Xd01YJF"
+#url = "https://uwsijobngxklibfiegzw.supabase.co"
+#key = "sb_publishable_MPsGCY6VpZsZLDc3f8FRXw_0Xd01YJF"
 
 SUPABASE_URL = input("Supabase URL: ").strip()
 SUPABASE_ANON_KEY = getpass("Supabase anon key: ").strip()
