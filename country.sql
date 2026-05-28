@@ -77,7 +77,13 @@ INSERT INTO edu_country.currencies (currency_code, country_code, currency_name, 
 ('KRW', 'KR', 'South Korean Won', 1350.50),
 ('USD', 'US', 'US Dollar', 1.00),
 ('EUR', 'FR', 'Euro', 0.92);
-
+('JPY', 'JP', 'Japanese Yen', 9.15),
+('CAD', 'CA', 'Canadian Dollar', 1015.30),
+('CNY', 'CN', 'Chinese Yuan', 188.45),
+('SGD', 'SG', 'Singapore Dollar', 1023.80),
+('PHP', 'PH', 'Philippine Peso', 24.10),
+('EUR', 'DE', 'Euro', 1485.70),
+('GBP', 'GB', 'British Pound', 1732.40);
 -- ------------------------------------------------------------
 -- 1. 국가 수, 평균 인구, 최고 인구, 최저 인구를 한 번에 조회하기
 -- ------------------------------------------------------------
