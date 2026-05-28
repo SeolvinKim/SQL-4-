@@ -68,6 +68,13 @@ INSERT INTO edu_country.languages (country_code, language_name, is_official) VAL
 ('KR', 'Korean', TRUE),
 ('US', 'English', TRUE),
 ('FR', 'French', TRUE);
+('JP', 'Japanese', TRUE),      -- 일본 (일어)
+('CA', 'English', TRUE),       -- 캐나다 (영어, 불어도 공용어이나 대표로 영어 추가)
+('CN', 'Chinese', TRUE),       -- 중국 (중국어)
+('SG', 'English', TRUE),       -- 싱가포르 (영어, 말레이어/중국어/타밀어도 있으나 대표로 영어 추가)
+('PH', 'Filipino', TRUE),      -- 필리핀 (필리핀어)
+('DE', 'German', TRUE),        -- 독일 (독일어)
+('GB', 'English', TRUE);       -- 영국 (영어)
 
 -- 4. landmarks (랜드마크 데이터)
 INSERT INTO edu_country.landmarks (landmark_name, country_code, city_id, established_year) VALUES
