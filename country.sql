@@ -80,7 +80,15 @@ INSERT INTO edu_country.languages (country_code, language_name, is_official) VAL
 INSERT INTO edu_country.landmarks (landmark_name, country_code, city_id, established_year) VALUES
 ('Gyeongbokgung Palace', 'KR', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Seoul'), 1395),
 ('Statue of Liberty', 'US', (SELECT city_id FROM edu_country.cities WHERE city_name = 'New York'), 1886),
-('Eiffel Tower', 'FR', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Paris'), 1889);
+('Eiffel Tower', 'FR', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Paris'), 1889),
+('N Seoul Tower', 'KR', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Seoul'), 1975),
+('Empire State Building', 'US', (SELECT city_id FROM edu_country.cities WHERE city_name = 'New York'), 1931),
+('Louvre Museum', 'FR', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Paris'), 1793),
+('Tokyo Tower', 'JP', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Tokyo'), 1958),
+('Big Ben', 'GB', (SELECT city_id FROM edu_country.cities WHERE city_name = 'London'), 1859),
+('Brandenburg Gate', 'DE', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Berlin'), 1791),
+('Marina Bay Sands', 'SG', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Singapore'), 2010);
+
 
 -- 5. currencies (통화 데이터)
 INSERT INTO edu_country.currencies (currency_code, country_code, currency_name, exchange_rate) VALUES
