@@ -23,7 +23,7 @@ CREATE TABLE edu_uni.students (
 );
 
 
-==========자료추가
+--자료추가--
 
 INSERT into edu_uni.students values
 (1, '김예린', 2001, 'F', 1, '1111@naver.com', '010-1111-1111', 'SEOUL'),
@@ -33,7 +33,7 @@ INSERT into edu_uni.students values
 (5, '노재희', 1999, 'F', 2, '5555@daum.net', '010-5555-5555', 'BUSAN');
 
 
-======================
+
 
 CREATE TABLE edu_uni.departments (
 		department_id INTEGER PRIMARY KEY,
@@ -45,7 +45,7 @@ CREATE TABLE edu_uni.departments (
 
 
 
-==========자료추가
+/*자료추가*/
  
 INSERT INTO edu_uni.departments
     (department_id, department_name, location_id, contact_number, student_count)
@@ -66,7 +66,7 @@ CREATE TABLE edu_uni.classes (
 );
 
 
-==========자료추가
+/*자료추가*/
 
 INSERT INTO edu_uni.classes VALUES
     (1, '기계설계','전공', 40, '1학기'),
@@ -99,7 +99,7 @@ CONSTRAINT fk_departments
 );
 
 
-==========자료추가
+/*자료추가*/
 
 INSERT INTO edu_uni.professors VALUES
 (1, '김병철', 30,1, 'kim@gmail.com','F'),
@@ -144,33 +144,31 @@ INSERT INTO edu_uni.grades (grade, lecture_name, professor_name, class_id, stude
 
 
 
-#1. 학생의 나이를 많은 사람부터
+/*1. 학생의 나이를 많은 사람부터*/
 
-```
+
 SELECT *
 	FROM edu_uni.students
 	ORDER BY birth_year;
-```
 
-#2. 서울 사는 학생들의 이름과 학번 조회
 
-```
+/*2. 서울 사는 학생들의 이름과 학번 조회*/
+
 SELECT student_id, student_name
 	FROM edu_uni.students
 	WHERE address = 'SEOUL';
-```
 
-#3. 1학기에만 열리는 과목 조회 
+/*3. 1학기에만 열리는 과목 조회 */
 
-```
+
 SELECT *
 	FROM edu_uni.classes
 	WHERE semester = '1학기';
-```
 
-#4. 성적이 A 이상인 학생
 
-```
+/*4. 성적이 A 이상인 학생*/
+
+
 select
     s.student_id,
     s.student_name,
@@ -180,9 +178,9 @@ from edu_uni.grades g
 join edu_uni.students s using(student_id)
 where g.grade = 'A' or g.grade = 'A+'
 order by g.grade DESC;
-```
 
-#5. 이메일 도메인이 [naver.com](http://naver.com) 인 학생
+
+/*5. 이메일 도메인이 [naver.com](http://naver.com) 인 학생*/
 SELECT *
 	FROM edu_uni.students
 	WHERE email ILIKE '%@naver.com';
