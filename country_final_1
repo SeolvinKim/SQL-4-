@@ -1,22 +1,17 @@
 import random
 from getpass import getpass
-from supabase import create_client  #, Client
+from supabase import create_client, Client
 
-
-""" url = "https://uwsijobngxklibfiegzw.supabase.co"
-key = "sb_publishable_MPsGCY6VpZsZLDc3f8FRXw_0Xd01YJF"
-supabase: Client = create_client(url, key) """
 
 ranking_data = []
 
 def connect_supabase():
-    url = input("Supabase URL: ").strip()
-    anon_key = getpass("Supabase anon key: ").strip()
+    url = "https://uwsijobngxklibfiegzw.supabase.co"
+    key = "sb_publishable_MPsGCY6VpZsZLDc3f8FRXw_0Xd01YJF"
+    Client = create_client(url, key)
 
-    client = create_client(url, anon_key)
     print("Supabase 연결 완료")
     return client
-
 
 supabase = connect_supabase()
 
