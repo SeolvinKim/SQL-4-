@@ -46,6 +46,9 @@ CREATE TABLE edu_country.currencies (
 
 -- 1. countries (국가 데이터)
 INSERT INTO edu_country.countries (country_code, country_name, continent, population) VALUES
+('KR', 'South Korea', 'Asia', 51780000),
+('US', 'United States', 'North America', 331900000),
+('FR', 'France', 'Europe', 67900000),
 ('JP', 'Japan', 'Asia', 125800000),
 ('CA', 'Canada', 'North America', 38900000),
 ('CN', 'China', 'Asia', 1412000000),
@@ -74,6 +77,9 @@ INSERT INTO edu_country.landmarks (landmark_name, country_code, city_id, establi
 
 -- 5. currencies (통화 데이터)
 INSERT INTO edu_country.currencies (currency_code, country_code, currency_name, exchange_rate) VALUES
+('KRW', 'KR', 'South Korean Won', 1350.50),
+('USD', 'US', 'US Dollar', 1.00),
+('EUR', 'FR', 'Euro', 0.92),
 ('JPY', 'JP', 'Japanese Yen', 9.15),
 ('CAD', 'CA', 'Canadian Dollar', 1015.30),
 ('CNY', 'CN', 'Chinese Yuan', 188.45),
