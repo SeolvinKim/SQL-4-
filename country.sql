@@ -55,7 +55,7 @@ INSERT INTO edu_country.countries (country_code, country_name, continent, popula
 ('SG', 'Singapore', 'Asia', 5900000),
 ('PH', 'Philippines', 'Asia', 113900000),
 ('DE', 'Germany', 'Europe', 83200000),
-('GB', 'United Kingdom', 'Europe', 67300000);
+('UK', 'United Kingdom', 'Europe', 67300000);
 
 -- 2. cities (도시 데이터)
 INSERT INTO edu_country.cities (city_name, country_code, is_capital) VALUES
@@ -92,7 +92,7 @@ INSERT INTO edu_country.landmarks (landmark_name, country_code, city_id, establi
 ('Empire State Building', 'US', (SELECT city_id FROM edu_country.cities WHERE city_name = 'New York'), 1931),
 ('Louvre Museum', 'FR', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Paris'), 1793),
 ('Tokyo Tower', 'JP', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Tokyo'), 1958),
-('Big Ben', 'GB', (SELECT city_id FROM edu_country.cities WHERE city_name = 'London'), 1859),
+('Big Ben', 'UK', (SELECT city_id FROM edu_country.cities WHERE city_name = 'London'), 1859),
 ('Brandenburg Gate', 'DE', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Berlin'), 1791),
 ('Marina Bay Sands', 'SG', (SELECT city_id FROM edu_country.cities WHERE city_name = 'Singapore'), 2010);
 
@@ -108,7 +108,7 @@ INSERT INTO edu_country.currencies (currency_code, country_code, currency_name, 
 ('SGD', 'SG', 'Singapore Dollar', 1023.80),
 ('PHP', 'PH', 'Philippine Peso', 24.10),
 ('EUR', 'DE', 'Euro', 1485.70),
-('GBP', 'GB', 'British Pound', 1732.40);
+('GBP', 'UK', 'British Pound', 1732.40);
 -- ------------------------------------------------------------
 -- 1. 국가 수, 평균 인구, 최고 인구, 최저 인구를 한 번에 조회하기
 -- ------------------------------------------------------------
