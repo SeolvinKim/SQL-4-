@@ -2,7 +2,7 @@ DROP SCHEMA IF EXISTS edu_uni CASCADE;
 
 CREATE SCHEMA edu_uni;
 
-=================================
+
 
 CREATE TABLE edu_uni.students (
     student_id      INTEGER PRIMARY KEY,
