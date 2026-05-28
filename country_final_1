@@ -230,9 +230,9 @@ def print_menu():
     print("\n=== 메뉴 ===")
     print("1. 나라 퀴즈 시작")
     print("2. 시각화 분석 자료 보기")
-    print("2. 퀴즈 로컬 랭킹 보기")
-    print("3. 퀴즈 DB 랭킹 보기")
-    print("4. 종료")
+    print("3. 퀴즈 로컬 랭킹 보기")
+    print("4. 퀴즈 DB 랭킹 보기")
+    print("5. 종료")
 
 
 def select():
