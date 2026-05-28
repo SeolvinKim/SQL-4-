@@ -267,7 +267,6 @@ def select():
             print("1~5 중에서 선택해주세요.")
 
 
-select()
 
 
 def show_analysis():
@@ -571,4 +570,4 @@ def show_analysis():
                 plt.show()
          else: 
                 print("잘못된 번호를 입력했습니다.")
-        
+select()
