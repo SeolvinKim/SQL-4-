@@ -22,9 +22,10 @@ def calculate_score(tries):
 
 def quiz(quiz_num):
     if quiz_num == 1:
-        landmark_quiz()
+        return landmark_quiz()
+
     elif quiz_num == 2:
-        currency_quiz()
+        return currency_quiz()
 
 
 
@@ -52,7 +53,10 @@ def currency_quiz():
     wrong_choices = [d["currency_name"] for d in data if d != answer_row]
 
     # 오답 3개 뽑기
-    wrong_sample = random.sample(wrong_choices, 3)
+    wrong_sample = random.sample(
+    wrong_choices,
+    min(3, len(wrong_choices))
+)
 
     # 보기 섞기
     options = wrong_sample + [correct_currency]
@@ -118,6 +122,7 @@ def landmark_quiz():
         print("\n오답 😢")
 
     print(f"정답: {country_map[correct_country]}")
+    return options.index(correct_country) + 1
         
 
 
