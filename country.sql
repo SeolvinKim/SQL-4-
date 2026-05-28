@@ -74,9 +74,6 @@ INSERT INTO edu_country.landmarks (landmark_name, country_code, city_id, establi
 
 -- 5. currencies (통화 데이터)
 INSERT INTO edu_country.currencies (currency_code, country_code, currency_name, exchange_rate) VALUES
-('KRW', 'KR', 'South Korean Won', 1350.50),
-('USD', 'US', 'US Dollar', 1.00),
-('EUR', 'FR', 'Euro', 0.92),
 ('JPY', 'JP', 'Japanese Yen', 9.15),
 ('CAD', 'CA', 'Canadian Dollar', 1015.30),
 ('CNY', 'CN', 'Chinese Yuan', 188.45),
