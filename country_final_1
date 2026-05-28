@@ -114,17 +114,9 @@ def landmark_quiz():
     for i, code in enumerate(options, 1):
         print(f"{i}. {country_map[code]}")
 
-    user = int(input("\n번호 선택: "))
 
-    if options[user - 1] == correct_country:
-        print("\n정답 🎉")
-    else:
-        print("\n오답 😢")
-
-    print(f"정답: {country_map[correct_country]}")
     return options.index(correct_country) + 1
-        
-
+    
 
 
 def start_game():
