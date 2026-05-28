@@ -61,7 +61,14 @@ INSERT INTO edu_country.countries (country_code, country_name, continent, popula
 INSERT INTO edu_country.cities (city_name, country_code, is_capital) VALUES
 ('Seoul', 'KR', TRUE),
 ('New York', 'US', FALSE),
-('Paris', 'FR', TRUE);
+('Paris', 'FR', TRUE),
+('Tokyo', 'JP', TRUE),
+('Ottawa', 'CA', TRUE),
+('Beijing', 'CN', TRUE),
+('Singapore', 'SG', TRUE),
+('Manila', 'PH', TRUE),
+('Berlin', 'DE', TRUE),
+('London', 'UK', TRUE);
 
 -- 3. languages (언어 데이터)
 INSERT INTO edu_country.languages (country_code, language_name, is_official) VALUES
